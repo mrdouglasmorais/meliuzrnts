@@ -6,15 +6,55 @@ import Contact from '../../Screens/Contact';
 
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Tabs = createBottomTabNavigator();
 
 const NavigationTabs = () => {
   return (
-    <Tabs.Navigator>
-      <Tabs.Screen name="Home" component={Home} />
-      <Tabs.Screen name="Listagem" component={List} />
-      <Tabs.Screen name="Contato" component={Contact} />
+    <Tabs.Navigator
+      initialRouteName="Home"
+      screenOptions={{
+        tabBarActiveTintColor: '#ff0055ea',
+      }}>
+      <Tabs.Screen
+        name="Home"
+        options={{
+          tabBarLabel: 'Home',
+          tabBarIcon: ({color, size}) => (
+            <MaterialCommunityIcons name="home" color={color} size={size} />
+          ),
+        }}
+        component={Home}
+      />
+      <Tabs.Screen
+        name="Listagem"
+        options={{
+          tabBarLabel: 'Listagem',
+          tabBarIcon: ({color, size}) => (
+            <MaterialCommunityIcons
+              name="clipboard-list-outline"
+              color={color}
+              size={size}
+            />
+          ),
+        }}
+        component={List}
+      />
+      <Tabs.Screen
+        name="Contato"
+        options={{
+          tabBarLabel: 'Contato',
+          tabBarIcon: ({color, size}) => (
+            <MaterialCommunityIcons
+              name="card-account-mail-outline"
+              color={color}
+              size={size}
+            />
+          ),
+        }}
+        component={Contact}
+      />
     </Tabs.Navigator>
   );
 };
