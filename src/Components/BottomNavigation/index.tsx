@@ -16,6 +16,7 @@ const NavigationTabs = () => {
       initialRouteName="Home"
       screenOptions={{
         tabBarActiveTintColor: '#ff0055ea',
+        tabBarInactiveTintColor: '#212121ea',
       }}>
       <Tabs.Screen
         name="Home"
