@@ -3,6 +3,7 @@ import React from 'react';
 import Home from '../../Screens/Home';
 import List from '../../Screens/List';
 import Contact from '../../Screens/Contact';
+import Details from '../../Screens/Details';
 
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
@@ -41,6 +42,20 @@ const NavigationTabs = () => {
           ),
         }}
         component={List}
+      />
+      <Tabs.Screen
+        name="Detalhes"
+        options={{
+          tabBarLabel: 'Detalhes',
+          tabBarIcon: ({color, size}) => (
+            <MaterialCommunityIcons
+              name="information-outline"
+              color={color}
+              size={size}
+            />
+          ),
+        }}
+        component={Details}
       />
       <Tabs.Screen
         name="Contato"
