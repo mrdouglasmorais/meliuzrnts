@@ -23,6 +23,7 @@ export interface IList {
 
 export interface IListStoreDetails {
   store: number;
-  expires_in: string;
+  expires_in: Date;
   value: number;
+  storeDetails?: IList;
 }
