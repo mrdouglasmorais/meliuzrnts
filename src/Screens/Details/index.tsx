@@ -1,15 +1,20 @@
 import React, {useState, useEffect} from 'react';
 import {View, Text, Image, StyleSheet} from 'react-native';
+import {useSelector} from 'react-redux';
+import {IGlobalStoreId} from '../../Store/Modules/ListDetails/Types';
 
 import api from '../../Services/api';
 
 import {IListStoreDetails} from '../../Types';
 
 const Details: React.FC = () => {
-  const [storeValue, setStoreValue] = useState(1);
+  const storeId = useSelector((state: IGlobalStoreId) => state);
+  const [storeValue, setStoreValue] = useState(3);
   const [storeData, setStoreData] = useState<IListStoreDetails>(
     {} as IListStoreDetails,
   );
+
+  console.log(storeId);
 
   useEffect(() => {
     api
@@ -28,7 +33,6 @@ const Details: React.FC = () => {
   }, [storeValue]);
 
   const dateParse = (value: Date) => {
-    console.log('date', value);
     return Intl.DateTimeFormat('pt-BR').format(new Date(value));
   };
 
