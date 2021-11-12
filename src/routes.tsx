@@ -14,7 +14,13 @@ const Routes: React.FC = () => {
       <Stack.Navigator>
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Listagem" component={List} />
-        <Stack.Screen name="Contato" component={Contact} />
+        <Stack.Screen
+          name="Contato"
+          component={Contact}
+          options={{
+            cardStyle: {backgroundColor: '#FFF'},
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

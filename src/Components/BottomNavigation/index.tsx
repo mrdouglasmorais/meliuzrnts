@@ -54,6 +54,7 @@ const NavigationTabs = () => {
               size={size}
             />
           ),
+          headerShown: false,
         }}
         component={Details}
       />
