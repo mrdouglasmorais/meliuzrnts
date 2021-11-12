@@ -12,7 +12,10 @@ const GlobalStoreID: Reducer<IGlobalStoreId | any> = (
   switch (action.type) {
     case 'SET': {
       const {store_id} = action.payload;
-      return (state = store_id);
+      return {
+        ...state,
+        store_id,
+      };
     }
     default: {
       return state;

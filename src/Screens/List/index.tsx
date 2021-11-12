@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {useDispatch} from 'react-redux';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import MapView, {Marker, Callout} from 'react-native-maps';
+import {useNavigation} from '@react-navigation/native';
 import api from '../../Services/api';
 import {IPosition, IList} from '../../Types';
 import {setNewStoreID} from '../../Store/Modules/ListDetails/Actions';
@@ -9,6 +10,7 @@ import {IGlobalStoreId} from '../../Store/Modules/ListDetails/Types';
 
 const List: React.FC = () => {
   const dispatch = useDispatch();
+  const nav = useNavigation();
 
   const [position] = useState<IPosition>({
     latitude: -23.673081449999998,
@@ -18,11 +20,12 @@ const List: React.FC = () => {
   });
   const [list, setList] = useState<IList[]>([]);
 
-  const handleStoreDetails = (val: number) => {
+  const handleStoreDetails = (val: number, screen: any) => {
     const newStore: IGlobalStoreId = {
       store_id: val,
     };
-    return dispatch(setNewStoreID(newStore));
+    dispatch(setNewStoreID(newStore));
+    nav.navigate(screen);
   };
 
   useEffect(() => {
@@ -44,7 +47,8 @@ const List: React.FC = () => {
             <Callout>
               <View style={styles.calloutStyle}>
                 <Text style={styles.calloutTitle}>{item.label}</Text>
-                <TouchableOpacity onPress={() => handleStoreDetails(item.id)}>
+                <TouchableOpacity
+                  onPress={() => handleStoreDetails(item.id, 'Detalhes')}>
                   <Text>Ver mais</Text>
                 </TouchableOpacity>
               </View>

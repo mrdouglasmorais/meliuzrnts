@@ -8,21 +8,20 @@ import api from '../../Services/api';
 import {IListStoreDetails} from '../../Types';
 
 const Details: React.FC = () => {
-  const storeId = useSelector((state: IGlobalStoreId) => state);
-  const [storeValue, setStoreValue] = useState(3);
+  const storeId = useSelector((state: IGlobalStoreId) => state.store_id);
   const [storeData, setStoreData] = useState<IListStoreDetails>(
     {} as IListStoreDetails,
   );
 
-  console.log(storeId);
+  console.log('redux value', storeId);
 
   useEffect(() => {
     api
-      .get(`discounts?store=${storeValue}`)
+      .get(`discounts?store=${storeId}`)
       .then(response => {
         if (response.data.length > 0) {
           api
-            .get(`stores/${storeValue}`)
+            .get(`stores/${storeId}`)
             .then(res => {
               setStoreData({...response.data[0], storeDetails: res.data});
             })
@@ -30,7 +29,7 @@ const Details: React.FC = () => {
         }
       })
       .catch(e => console.log(e));
-  }, [storeValue]);
+  }, [storeId]);
 
   const dateParse = (value: Date) => {
     return Intl.DateTimeFormat('pt-BR').format(new Date(value));
