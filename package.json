@@ -51,6 +51,9 @@
     "preset": "react-native",
     "bail": 1,
     "verbose": true,
+    "transformIgnorePatterns": [
+      "node_modules/(?!(@?react-native|react-native-maps|@react-navigation|react-native-vector-icons)/).*"
+    ],
     "moduleFileExtensions": [
       "ts",
       "tsx",
