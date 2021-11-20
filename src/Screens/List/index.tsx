@@ -36,7 +36,10 @@ const List: React.FC = () => {
 
   return (
     <View style={styles.default}>
-      <MapView style={styles.mapStyle} initialRegion={position}>
+      <MapView
+        style={styles.mapStyle}
+        initialRegion={position}
+        testID="map-component">
         {list.map(item => (
           <Marker
             key={item.id}

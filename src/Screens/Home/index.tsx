@@ -4,7 +4,10 @@ import {View, StyleSheet, Image} from 'react-native';
 const Home: React.FC = () => {
   return (
     <View style={styles.default}>
-      <Image source={require('../../Assets/Images/desconto.png')} />
+      <Image
+        testID="image-home"
+        source={require('../../Assets/Images/desconto.png')}
+      />
     </View>
   );
 };

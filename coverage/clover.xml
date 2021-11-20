@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1637365616031" clover="3.2.0">
-  <project timestamp="1637365616031" name="All files">
-    <metrics statements="87" coveredstatements="27" conditionals="26" coveredconditionals="7" methods="32" coveredmethods="11" elements="145" coveredelements="45" complexity="0" loc="87" ncloc="87" packages="9" files="10" classes="10"/>
+<coverage generated="1637369907516" clover="3.2.0">
+  <project timestamp="1637369907516" name="All files">
+    <metrics statements="87" coveredstatements="35" conditionals="26" coveredconditionals="7" methods="32" coveredmethods="13" elements="145" coveredelements="55" complexity="0" loc="87" ncloc="87" packages="9" files="10" classes="10"/>
     <package name="src">
       <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="App.tsx" path="/Users/douglasmorais/Desktop/meliuzrnts/src/App.tsx">
@@ -22,13 +22,13 @@
         <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
         <line num="12" count="1" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="27" count="2" type="stmt"/>
-        <line num="37" count="2" type="stmt"/>
-        <line num="51" count="2" type="stmt"/>
-        <line num="66" count="2" type="stmt"/>
-        <line num="79" count="1" type="stmt"/>
-        <line num="80" count="1" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="28" count="6" type="stmt"/>
+        <line num="39" count="6" type="stmt"/>
+        <line num="54" count="6" type="stmt"/>
+        <line num="70" count="6" type="stmt"/>
+        <line num="83" count="1" type="stmt"/>
+        <line num="84" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.Components.Hello">
@@ -107,30 +107,30 @@
       <file name="index.tsx" path="/Users/douglasmorais/Desktop/meliuzrnts/src/Screens/Home/index.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.Screens.List">
-      <metrics statements="16" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
+      <metrics statements="16" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="2"/>
       <file name="index.tsx" path="/Users/douglasmorais/Desktop/meliuzrnts/src/Screens/List/index.tsx">
-        <metrics statements="16" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <metrics statements="16" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="2"/>
         <line num="11" count="1" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
         <line num="24" count="0" type="stmt"/>
         <line num="27" count="0" type="stmt"/>
         <line num="28" count="0" type="stmt"/>
-        <line num="31" count="0" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
         <line num="33" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="41" count="0" type="stmt"/>
-        <line num="51" count="0" type="stmt"/>
-        <line num="63" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="66" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.Services">

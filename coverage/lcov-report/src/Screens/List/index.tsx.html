@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">12.5% </span>
+                <span class="strong">62.5% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/16</span>
+                <span class='fraction'>10/16</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">33.33% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>2/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">12.5% </span>
+                <span class="strong">62.5% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/16</span>
+                <span class='fraction'>10/16</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -141,7 +141,10 @@
 <a name='L82'></a><a href='#L82'>82</a>
 <a name='L83'></a><a href='#L83'>83</a>
 <a name='L84'></a><a href='#L84'>84</a>
-<a name='L85'></a><a href='#L85'>85</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -152,32 +155,35 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -235,19 +241,19 @@ import {IPosition, IList} from '../../Types';
 import {setNewStoreID} from '../../Store/Modules/ListDetails/Actions';
 import {IGlobalStoreId} from '../../Store/Modules/ListDetails/Types';
 &nbsp;
-const List: React.FC = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-  const dispatch = <span class="cstat-no" title="statement not covered" >useDispatch();</span>
-  const nav = <span class="cstat-no" title="statement not covered" >useNavigation();</span>
+const List: React.FC = () =&gt; {
+  const dispatch = useDispatch();
+  const nav = useNavigation();
 &nbsp;
-  const [position] = <span class="cstat-no" title="statement not covered" >useState&lt;IPosition&gt;({</span>
+  const [position] = useState&lt;IPosition&gt;({
     latitude: -23.673081449999998,
     longitude: -46.677047406643354,
     latitudeDelta: 0.0911,
     longitudeDelta: 0.0411,
   });
-  const [list, setList] = <span class="cstat-no" title="statement not covered" >useState&lt;IList[]&gt;([]);</span>
+  const [list, setList] = useState&lt;IList[]&gt;([]);
 &nbsp;
-  const handleStoreDetails = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(v</span>al: number, screen: any) =&gt; {</span>
+  const handleStoreDetails = <span class="fstat-no" title="function not covered" >(v</span>al: number, screen: any) =&gt; {
     const newStore: IGlobalStoreId = <span class="cstat-no" title="statement not covered" >{</span>
       store_id: val,
     };
@@ -255,15 +261,18 @@ const List: React.FC = <span class="fstat-no" title="function not covered" >()</
 <span class="cstat-no" title="statement not covered" >    nav.navigate(screen);</span>
   };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  useEffect(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    api.get('stores').then(<span class="fstat-no" title="function not covered" >re</span>sponse =&gt; {</span>
+  useEffect(() =&gt; {
+    api.get('stores').then(<span class="fstat-no" title="function not covered" >re</span>sponse =&gt; {
 <span class="cstat-no" title="statement not covered" >      setList(response.data);</span>
     });
   }, []);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
     &lt;View style={styles.default}&gt;
-      &lt;MapView style={styles.mapStyle} initialRegion={position}&gt;
+      &lt;MapView
+        style={styles.mapStyle}
+        initialRegion={position}
+        testID="map-component"&gt;
         {list.map(<span class="fstat-no" title="function not covered" >it</span>em =&gt; (
 <span class="cstat-no" title="statement not covered" >          &lt;Marker</span>
             key={item.id}
@@ -316,7 +325,7 @@ export default List;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Fri Nov 19 2021 20:46:55 GMT-0300 (Brasilia Standard Time)
+                at Fri Nov 19 2021 21:58:27 GMT-0300 (Brasilia Standard Time)
             </div>
         </div>
         <script src="../../../prettify.js"></script>

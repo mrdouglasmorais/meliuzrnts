@@ -22,6 +22,7 @@ const NavigationTabs = () => {
       <Tabs.Screen
         name="Home"
         options={{
+          tabBarTestID: 'home-button',
           tabBarLabel: 'Home',
           tabBarIcon: ({color, size}) => (
             <MaterialCommunityIcons name="home" color={color} size={size} />
@@ -32,6 +33,7 @@ const NavigationTabs = () => {
       <Tabs.Screen
         name="Listagem"
         options={{
+          tabBarTestID: 'list-button',
           tabBarLabel: 'Listagem',
           tabBarIcon: ({color, size}) => (
             <MaterialCommunityIcons
@@ -46,6 +48,7 @@ const NavigationTabs = () => {
       <Tabs.Screen
         name="Detalhes"
         options={{
+          tabBarTestID: 'details-button',
           tabBarLabel: 'Detalhes',
           tabBarIcon: ({color, size}) => (
             <MaterialCommunityIcons
@@ -61,6 +64,7 @@ const NavigationTabs = () => {
       <Tabs.Screen
         name="Contato"
         options={{
+          tabBarTestID: 'contact-button',
           tabBarLabel: 'Contato',
           tabBarIcon: ({color, size}) => (
             <MaterialCommunityIcons
